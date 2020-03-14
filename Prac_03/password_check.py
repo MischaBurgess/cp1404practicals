@@ -2,11 +2,22 @@
 """Password checker"""
 """Checks the length of password and returns asterisks"""
 
-print("Your password should have a minimum length of 10 characters")
-password = input("Please enter your password: ")
-min_length = 10 ## minimum character length
-if len(password) < min_length:
-  print("Your {} character password is invalid".format(len(password)))
-elif len(password) > min_length:
+def main():
+    password = get_password()
+    print_stars(password)
+
+
+def print_stars(password):
   for i in range(0, len(password)):
-    print("*", end=' ') ## print asterisks
+    print("*", end=' ')  ## print asterisks
+
+
+def get_password():
+  min_length = 10
+  password = input("Please enter a password with at least {} characters: ".format(min_length))
+  while len(password) < min_length:
+    password = input("Please enter a password with at least {} characters: ".format(min_length))
+  return password
+
+
+main()
