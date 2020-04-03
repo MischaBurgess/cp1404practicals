@@ -12,8 +12,7 @@ print(CODE_TO_NAME)
 
 state_code = input("Enter short state: ")
 while state_code != "":  # while state code is not empty
-    if state_code.islower():  # checks if entered in lowercase
-        state_code = state_code.upper()  # changes user input into uppercase
+    state_code = state_code.upper()  # changes user input into uppercase
     if state_code in CODE_TO_NAME:  # if code matches, then..
         print(state_code, "is", CODE_TO_NAME[state_code])  # print description
     else:

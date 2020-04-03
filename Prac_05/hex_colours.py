@@ -3,14 +3,14 @@ Hex Colours task CP1404
 Mischa Burgess
 """""
 
-Colours = {"AliceBlue": "#f0f8ff", "AntiqueWhite": "#faebd7", "azure1": "#f0ffff", "blue1": "#0000ff",
+colours = {"AliceBlue": "#f0f8ff", "AntiqueWhite": "#faebd7", "azure1": "#f0ffff", "blue1": "#0000ff",
            "BlueViolet": "#8a2be2", "chartreuse1": "#7fff00", "cyan2": "#00eeee", "DarkGreen": "#006400",
            "DarkOrchid": "#9932cc", "DarkSalmon": "#e9967a"}  # create a hex colour dictionary
 
-Colour_choice = input("Enter the name of the colour you would like: ")
-while Colour_choice != "":  # while colour choice isn't empty
-    print("The colour code for {} is {}".format(Colour_choice, Colours.get(Colour_choice)))  # return colour code
-    Colour_choice = input("Enter the name of the colour you would like: ")
+colour_choice = input("Enter the name of the colour you would like: ")
+while colour_choice != "":  # while colour choice isn't empty
+    print("The colour code for {} is {}".format(colour_choice, colours.get(colour_choice)))  # return colour code
+    colour_choice = input("Enter the name of the colour you would like: ")
 
 
 

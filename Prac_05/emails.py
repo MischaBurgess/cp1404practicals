@@ -11,11 +11,13 @@ def main():
     while email != "":  # while email is not empty
         name = email_to_name_function(email)  # get name from email using function
         response = input("Is your name {}? (y/n) ".format(name))  # check name is correct
+        while response.lower() != "y" or response.lower() != "n":  # check user input = 'y' or 'n'
+            response = input("Is your name {}? (y/n) ".format(name))
         if response.lower() != "y" and response != "":  # is response is 'n'
             name = input("Name: ")
         name_from_email[email] = name  # save name in dictionary
         email = input("Email: ")
-print("\n")  # print new line
+    print("\n")  # print new line
     for email, name in name_from_email.items():  # iterate through dictionary (both keys and values)
         print(" {} ({})".format(name, email))  # print results
 
